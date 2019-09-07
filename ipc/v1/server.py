@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 import socket
 from socket import error as socket_error
 import os,sys
@@ -196,9 +196,9 @@ def resolve_host_ip(host):
 #-----------------------------------
 mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = socket.gethostbyname(socket.getfqdn())
-if host == "127.0.1.1":
+if host == "127.0.0.1":
 #    host = commands.getoutput("hostname")
-    print "ERROR: failed to get hostname"
+    print "ERROR: failed to get hostname:",host
     sys.exit(1)
 print "STARTING server @ " + host
 #print "google = %s" % resolve_host_ip('fpSean.local')

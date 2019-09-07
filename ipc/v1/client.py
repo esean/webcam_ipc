@@ -11,7 +11,8 @@ def resolve_host_ip(host):
         return None
     return remote_ip
 
-host = "169.254.165.185" #"10.0.0.6"
+host = sys.argv[1]
+#host = "169.254.165.185" #"10.0.0.6"
 # TODO: look up our server
 #host = resolve_host_ip('fpSean.local')
 port = 9876
